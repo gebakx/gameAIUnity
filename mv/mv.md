@@ -18,20 +18,24 @@ Per fer el moviment fem dues assumpcions:
 
 Existeixen 3 nivells en el moviment:
 - Cinemàtic: la velocitat és constant
-- *Steering*: tenim accelearació
+- *Steering*: afegim acceleració
 - *Steering* + *NavMesh*: afegim el sistema de *path finding*
 
-## Simples
+## Individuals
 
-- [Seek](seek.md): descripció
+- *[Seek/flee](seek.md)*: moviment l'agent va cap a un punt determinat o se n'allunya
 
-- ...
+- *[Wander](wander.md)*: moviment que simula un passeig aleatòri
+
+- [Patrulla](patrolling.md).
+
+- *[NavMesh](navmesh.md)*: sistema integrat dels motors per fer *path finding*
 
 ## Grupals
 
-- *Flocking*
+- Formació
 
-- Tactics
+- *Flocking*
 
 ## Referències
 
