@@ -1,11 +1,11 @@
 ## IA per videojocs
 ([versión española](readme.sp.md))
 
-* [Moviment](mv.md)
+* [Moviment](mv/mv.md)
 
-* [Decision Making](dm.md)
+* [Decision Making](dm/dm.md)
 
-* [Machine Learning](ml.md)
+* [Machine Learning](ml/ml.md)
 
-pendent
+
 
