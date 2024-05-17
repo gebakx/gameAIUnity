@@ -2,13 +2,39 @@
 
 ## Introducció
 
-![:scale 75%](figures/esquema.png)
+La figura següent mostra els components usuals d'un sistema *Game AI*:
 
-## Seek
+|![Esquema GameAI](figures/esquema.png)|
+|:--:| 
+| *Font: (Millington, 2019)* |
 
+El moviment és el component de més baix nivell dins d'una IA. 
+
+Aquest es sol descomposar en moviments atòmics molt simples que poden ser combinats per assolir-ne de molt complexos.
+
+Per fer el moviment fem dues assumpcions:
+- caràcter com a punts (centre de masses)
+- treballem amb $2\frac{1}{2}$ dimensions per simplificar les fòrmules
+
+Existeixen 3 nivells en el moviment:
+- Cinemàtic: la velocitat és constant
+- *Steering*: tenim accelearació
+- *Steering* + *NavMesh*: afegim el sistema de *path finding*
+
+## Simples
+
+- [Seek](seek.md): descripció
+
+- ...
+
+## Grupals
+
+- *Flocking*
+
+- Tactics
 
 ## Referències
 
-1. Ian Millington. *AI for Games* (3rd ed). CRC Press, 2019.
+- Ian Millington. *AI for Games* (3rd ed). CRC Press, 2019.
 
-2. Craig W. Reynolds. [Steering Behaviors For autonomous Characters](http://www.red3d.com/cwr/papers/1999/gdc99steer.pdf). Proceedings of the Game Developers Conference (GDC), 1999.
+- Craig W. Reynolds. [Steering Behaviors For autonomous Characters](http://www.red3d.com/cwr/papers/1999/gdc99steer.pdf). Proceedings of the Game Developers Conference (GDC), 1999.
