@@ -1,16 +1,13 @@
-## Moviment
+# Moviment
 
-### Esquema general
-
----
+## Introducció
 
 ![:scale 75%](figures/esquema.png)
 
+## Seek
 
 
-### Referències
-
----
+## Referències
 
 1. Ian Millington. *AI for Games* (3rd ed). CRC Press, 2019.
 
