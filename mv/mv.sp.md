@@ -13,7 +13,7 @@ El movimiento es el componente de más bajo nivel dentro de una IA.
 Este se suele descomponer en movimientos atómicos muy simples que pueden ser combinados para conseguir de muy complejos.
 
 Para hacer el movimiento asumiremos:
-- caràcter como puntos (centro de masas)
+- carácter como puntos (centro de masas)
 - trabajaremos en $2\frac{1}{2}$ dimensiones para simplificar las fórmulas
 
 Existen 3 niveles en el movimiento:
