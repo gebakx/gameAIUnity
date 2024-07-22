@@ -23,6 +23,8 @@ Existeixen 3 nivells en el moviment:
 
 ## Individuals
 
+- [Plantilla del moviment](template.md)
+
 - *[Seek / flee](seek.md)*: moviment l'agent va cap a un punt determinat o se n'allunya
 
 - *[Wander](wander.md)*: moviment que simula un passeig aleatòri
