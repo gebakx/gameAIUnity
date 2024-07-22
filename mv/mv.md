@@ -33,6 +33,8 @@ Existeixen 3 nivells en el moviment:
 
 - *[NavMesh](navmesh.md)*: sistema integrat dels motors per fer *path finding*
 
+- [Utilitats matemàtiques en Unity per al moviment](utils.md)
+
 ## Grupals
 
 - [Formació](formacio.md): moviment típic de tropes
