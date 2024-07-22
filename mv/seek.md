@@ -56,8 +56,45 @@ L'agent involucrat es diu *robber* i trobareu una sèrie de paràmetres:
 
 El paràmetre *vehicle* serveix per indicar si volem que faci el gir i el moviment d'avançar a la vegada. En cas contrari, primer gira i després avança.
 
+## Moviments d'*Steering*
 
+Els moviments cinemàtics tenen l'inconvenient de que no són gaire realistes. Els moviments d'*steering* afegeixen acceleració als anteriors per solucionar-ho.
 
+A continuació teniu el codi que necessitem:
+
+```C#
+turnSpeed += turnAcceleration * Time.deltaTime;
+turnSpeed = Mathf.Min(turnSpeed, maxTurnSpeed);
+movSpeed += acceleration * Time.deltaTime;
+movSpeed = Mathf.Min(movSpeed, maxSpeed);
+```
+
+### Arriving
+
+Hem d'evitar que un agent en moviment arribi a la seva destinació. En cas contrari, pot començar a realitzar moviments cíclics al voltant de la destinació. Dos comportaments de parada són:
+
+- .blue[Stopping distance]: l'agent s'atura en arribar a una certa distància de l'objectiu
+
+- .blue[Steering Arrive]: l'agent comença frenar en arribar a una distància de parada
+
+$$speed=\frac{maxSpeed\times distance}{slowRadius}$$
+
+### Demo
+
+A l'arxiu [seekSteering.zip](demos/seekSteering.zip) trobareu un exemple d'implementació.
+L'agent involucrat es diu *robber* i trobareu una sèrie de paràmetres:
+
+![](figures/robberSteering.png)
+
+## Referències
+
+- Craig W. Reynolds. [Steering Behaviors For autonomous Characters](http://www.red3d.com/cwr/papers/1999/gdc99steer.pdf). Proceedings of the Game Developers Conference (GDC), 1999.
+
+- Asset [Easy Primitive People](https://assetstore.unity.com/packages/3d/characters/easy-primitive-people-161846)
+
+- Asset [Five Seamless Tileable Ground Textures](https://assetstore.unity.com/packages/2d/textures-materials/floors/five-seamless-tileable-ground-textures-57060)
+
+- Asset [LowPoly Trees and Rocks](https://assetstore.unity.com/packages/3d/vegetation/lowpoly-trees-and-rocks-88376)
 
 
 
