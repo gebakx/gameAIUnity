@@ -47,7 +47,14 @@ float angle = Mathf.Rad2Deg * Mathf.Atan2(movement.x, movement.z);
 Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.up);  // up = y
 ```
 
+### Demo
 
+A l'arxiu [seekKin.zip](demos/seekKin.zip) trobareu un exemple d'implementació.
+L'agent involucrat es diu *robber* i trobareu una sèrie de paràmetres:
+
+![](figures/robberKin.png)
+
+El paràmetre *vehicle* serveix per indicar si volem que faci el gir i el moviment d'avançar a la vegada. En cas contrari, primer gira i després avança.
 
 
 
