@@ -73,9 +73,9 @@ movSpeed = Mathf.Min(movSpeed, maxSpeed);
 
 Hem d'evitar que un agent en moviment arribi a la seva destinació. En cas contrari, pot començar a realitzar moviments cíclics al voltant de la destinació. Dos comportaments de parada són:
 
-- .blue[Stopping distance]: l'agent s'atura en arribar a una certa distància de l'objectiu
+- **Stopping distance**: l'agent s'atura en arribar a una certa distància de l'objectiu
 
-- .blue[Steering Arrive]: l'agent comença frenar en arribar a una distància de parada
+- **Steering Arrive**: l'agent comença frenar en arribar a una distància de parada
 
 $$speed=\frac{maxSpeed\times distance}{slowRadius}$$
 
