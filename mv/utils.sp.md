@@ -32,5 +32,7 @@ $$v\times w=(v_y\cdot w_z-v_z\cdot w_y,v_z\cdot w_x-v_x\cdot v_z,v_x\cdot w_y-v_
 
 - Anti-clockwise: $(v\times w).z<0$
 
-![](figures/cross_product.png)<br>
-Fuente: [wikipedia](https://en.wikipedia.org/wiki/Cross_product)
+|![](figures/cross_product.png)|
+|:--:| 
+| *Fuente: [wikipedia](https://en.wikipedia.org/wiki/Cross_product)* |
+
