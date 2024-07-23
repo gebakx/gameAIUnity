@@ -1,6 +1,6 @@
 # Wander
 
-|![](figures/Wander.png)|
+|![](figures/wander.png)|
 |:--:| 
 | *Font: (Millington, 2019)* |
 
