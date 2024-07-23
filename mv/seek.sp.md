@@ -49,7 +49,7 @@ Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.up);  // up = y
 
 ### Demo
 
-En el archivo [seekKin.zip](demos/seekKin.zip) encontraréis un ejemplo de implementación.
+En el archivo [seekKin.zip](demos/seekKin.unitypackage) encontraréis un ejemplo de implementación.
 El agente involucrado se llama *robber* y tiene una serie de parámetros:
 
 ![](figures/robberKin.png)
@@ -81,7 +81,7 @@ $$speed=\frac{maxSpeed\times distance}{slowRadius}$$
 
 ### Demo
 
-En el archivo [seekSteering.zip](demos/seekSteering.zip) encontraréis un ejemplo de implementación.
+En el archivo [seekSteering.zip](demos/seekSteering.unitypackage) encontraréis un ejemplo de implementación.
 El agente involucrado se llama *robber* y tiene algunos parámetros:
 
 ![](figures/robberSteering.png)
