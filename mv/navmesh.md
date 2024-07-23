@@ -80,6 +80,22 @@ Un cop fet això, recordeu afegir, dins l'Inspector, el propi agent a la propiet
 A l'arxiu [seekSurface](demos/seekSurface.unitypackage) trobareu un exemple d'implementació.
 L'agent involucrat es diu *robber* i trobareu una sèrie de paràmetres:
 
+## NavMesh Obstacles i Off-mesh Links
+
+Dos components adicionals importants relacionats amb el *NavMesh*:
+
+- **NavMesh Obstacles**: se solen associar a objectes dinàmics (exemple: portes)
+
+|![](figures/NavMeshObstacle.svg)|
+|:--:| 
+| *Font: [Creating a NavMesh Obstacle](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/CreateNavMeshObstacle.html)* |
+
+- **Off-mesh Links**: serveixen per crear ponts entre diferents superfícies
+
+|![](figures/NavMeshObstacle.svg)|
+|:--:| 
+| *Font: [Creating an Off-mesh Link](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/CreateOffMeshLink.html)* |
+
 ## Referències
 
 - [Inner Workings of the Navigation System](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavInnerWorkings.html)
