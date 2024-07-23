@@ -25,13 +25,13 @@ Existeixen 3 nivells en el moviment:
 
 - [Plantilla del moviment](template.md)
 
-- *[Seek / flee](seek.md)*: moviment de l'agent va cap a un punt determinat o se n'allunya
+- *[Seek / flee](seek.md)* (cinemàtic i steering): moviment de l'agent va cap a un punt determinat o se n'allunya
+
+- *[NavMesh](navmesh.md)* (seek): sistema integrat dels motors per fer *path finding*
 
 - *[Wander](wander.md)*: moviment que simula un passeig aleatòri
 
 - [Patrulla](patrolling.md): moviment en el que l'agent va seguint un camí predeterminat
-
-- *[NavMesh](navmesh.md)*: sistema integrat dels motors per fer *path finding*
 
 - [Utilitats matemàtiques en Unity per al moviment](utils.md)
 
