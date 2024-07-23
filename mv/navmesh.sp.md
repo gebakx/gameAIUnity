@@ -2,7 +2,7 @@
 
 |![](figures/NavMesh.svg)|
 |:--:| 
-| *Font: [Inner Workings of the Navigation System](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavInnerWorkings.html)* |
+| *Fuente: [Inner Workings of the Navigation System](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavInnerWorkings.html)* |
 
 ## Componentes del sistema de navegación
 
@@ -36,7 +36,7 @@ El *NavMesh Agent* es el responsable de hacer un *seek* combinado con el *path f
 
 |![](figures/NavMeshLoop.svg)|
 |:--:| 
-| *Font: [Inner Workings of the Navigation System](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavInnerWorkings.html)* |
+| *Fuente: [Inner Workings of the Navigation System](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavInnerWorkings.html)* |
 
 **Componente**:
 
@@ -87,13 +87,13 @@ Dos componentes adicionales importantes relacionados con el *NavMesh*:
 
 |![](figures/NavMeshObstacle.svg)|
 |:--:| 
-| *Font: [Creating a NavMesh Obstacle](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/CreateNavMeshObstacle.html)* |
+| *Fuente: [Creating a NavMesh Obstacle](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/CreateNavMeshObstacle.html)* |
 
 - **Off-mesh Links**: sirven para crear puentes entre diferentes superfícies
 
 |![](figures/NavMeshObstacle.svg)|
 |:--:| 
-| *Font: [Creating an Off-mesh Link](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/CreateOffMeshLink.html)* |
+| *Fuente: [Creating an Off-mesh Link](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/CreateOffMeshLink.html)* |
 
 ## Referencias
 
