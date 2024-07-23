@@ -2,9 +2,9 @@
 
 En el moviment *seek* calculem la direcció de l'agent cap a la seva destinació. El *flee* serà el seu moviment contrari.
 
-![](figures/seek.png)
-
-Font: (Reynolds, 1999)
+|![](figures/seek.png)|
+|:--:| 
+| *Font: (Reynolds, 1999)* |
 
 ## Moviment cinemàtic
 

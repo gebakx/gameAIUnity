@@ -6,7 +6,7 @@ La figura siguiente muestra los componentes usuales de un sistema *Game AI*:
 
 |![Esquema GameAI](figures/esquema.png)|
 |:--:| 
-| *Font: (Millington, 2019)* |
+| *Fuente: (Millington, 2019)* |
 
 El movimiento es el componente de más bajo nivel dentro de una IA.
 
