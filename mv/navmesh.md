@@ -78,7 +78,7 @@ Un cop fet això, recordeu afegir, dins l'Inspector, el propi agent a la propiet
 ### Demo
 
 A l'arxiu [seekSurface](demos/seekSurface.unitypackage) trobareu un exemple d'implementació.
-L'agent involucrat es diu *robber* i trobareu una sèrie de paràmetres:
+L'agent involucrat es diu *robber* i trobareu una sèrie de paràmetres.
 
 ## NavMesh Obstacles i Off-mesh Links
 

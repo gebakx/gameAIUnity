@@ -25,13 +25,15 @@ Existen 3 niveles en el movimiento:
 
 - [Plantilla del movimiento](template.sp.md)
 
-- *[Seek / flee](seek.sp.md)*: movimiento del agente hacia un punto determinado o se aleja
+- *[Seek / flee](seek.sp.md)* (cinemático y steering): movimiento del agente hacia un punto determinado o se aleja
+
+- *[NavMesh](navmesh.sp.md)* (seek): sistema integrado de los motores para hacer *path finding*
 
 - *[Wander](wander.sp.md)*: movimiento que simula un paseo aleatorio
 
 - [Patrulla](patrolling.sp.md): movimiento en el que el agente va siguiendo un camino predeterminado
 
-- *[NavMesh](navmesh.sp.md)*: sistema integrado de los motores para hacer *path finding*
+- [Pursue / Evade](): pendiente
 
 - [Utilidades matemáticas en Unity para el movimiento](utils.sp.md)
 

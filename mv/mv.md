@@ -33,7 +33,7 @@ Existeixen 3 nivells en el moviment:
 
 - [Patrulla](patrolling.md): moviment en el que l'agent va seguint un camí predeterminat
 
-- [Pursue / Evade]: pendent
+- [Pursue / Evade](): pendent
 
 - [Utilitats matemàtiques en Unity per al moviment](utils.md)
 
