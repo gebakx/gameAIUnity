@@ -32,6 +32,10 @@ Seleccioneu el terra i cliqueu en el botó *Bake* del component *NavMesh Surface
 
 ## NavMesh Agent
 
+|![](figures/NavMeshAgent.svg)|
+|:--:| 
+| *Font: [Inner Workings of the Navigation System](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavInnerWorkings.html)* |
+
 Afegiu el component *NavMesh Agent* a l'objecte que volqueu fer moure.
 
 ![](figures/NavMeshAgent.png)
