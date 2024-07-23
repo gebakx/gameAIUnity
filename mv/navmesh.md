@@ -22,13 +22,21 @@ Per poder utilitzar aquest component s'ha d'instal·lar previament. Aneu al men�
 
 **Creació de les superfícies**:
 
-Seleccioneu l'objecte que representa el terra de l'escena i afegiu el component *NavMesh Surface*
+Seleccioneu l'objecte que representa el terra de l'escena i afegiu el component *NavMesh Surface*. Assegureu-vos que el camp *Default Area* està a *Walkable*.
 
+Afegiu el component *NavMesh Modifier* a tots els altres objectes de l'escena. Seleccioneu el valor *Add or Modify object* a tots els objectes estàtics que representin obstacles i *Remove* per als agents.
+
+Seleccioneu el terra i cliqueu en el botó *Bake* del component *NavMesh Surface*. Això ens crearà la superfície de polígons.
 
 ![](figures/NavMeshSurface.png)
 
+## NavMesh Agent
+
+Afegiu el component *NavMesh Agent* a l'objecte que volqueu fer moure.
 
 ![](figures/NavMeshAgent.png)
+
+
 
 ```C#
 using System.Collections;
