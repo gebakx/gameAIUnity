@@ -32,15 +32,23 @@ Seleccioneu el terra i cliqueu en el botó *Bake* del component *NavMesh Surface
 
 ## NavMesh Agent
 
+El *NavMesh Agent* és el responsable de fer un *seek* combinat amb el *path finding* i l'*object avoidance*:
+
 |![](figures/NavMeshLoop.svg)|
 |:--:| 
 | *Font: [Inner Workings of the Navigation System](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavInnerWorkings.html)* |
+
+**Component**:
 
 Afegiu el component *NavMesh Agent* a l'objecte que volqueu fer moure.
 
 ![](figures/NavMeshAgent.png)
 
+Fixeu-vos que podeu modificar un munt de paràmetres relacionats amb el moviment.
 
+**Script**:
+
+Per fer que l'objecte es mogui haureu de crear un *script* i afegir-lo com a component a l'agent.
 
 ```C#
 using System.Collections;
@@ -64,4 +72,22 @@ public class Moves : MonoBehaviour
     }
 }
 ```
+
+Un cop fet això, recordeu afegir, dins l'Inspector, el propi agent a la propietat *agent* i la destinació a *target*. Assignar una posició a la propietat *destination* del *NavMesh Agent* equival a fer un *seek* avançat.
+
+### Demo
+
+A l'arxiu [seekSurface](demos/seekSurface.unitypackage) trobareu un exemple d'implementació.
+L'agent involucrat es diu *robber* i trobareu una sèrie de paràmetres:
+
+## Referències
+
+- [Inner Workings of the Navigation System](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavInnerWorkings.html)
+
+- Asset [Easy Primitive People](https://assetstore.unity.com/packages/3d/characters/easy-primitive-people-161846)
+
+- Asset [Five Seamless Tileable Ground Textures](https://assetstore.unity.com/packages/2d/textures-materials/floors/five-seamless-tileable-ground-textures-57060)
+
+- Asset [LowPoly Trees and Rocks](https://assetstore.unity.com/packages/3d/vegetation/lowpoly-trees-and-rocks-88376)
+
 
