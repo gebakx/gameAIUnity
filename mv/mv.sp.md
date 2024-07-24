@@ -31,7 +31,7 @@ Existen 3 niveles en el movimiento:
 
 - *[Wander](wander.sp.md)*: movimiento que simula un paseo aleatorio
 
-- [Patrulla](patrolling.sp.md): movimiento en el que el agente va siguiendo un camino predeterminado
+- [Patrolling](patrolling.sp.md): movimiento en el que el agente va siguiendo un camino predeterminado
 
 - [Pursue / Evade](pursue.sp.md) (persecución / evasión)
 
