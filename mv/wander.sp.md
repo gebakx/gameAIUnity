@@ -19,6 +19,7 @@ localTarget *= radius;
 localTarget += new Vector3(0, 0, offset);
 
 Vector3 worldTarget = transform.TransformPoint(localTarget);
+worldTarget.y = 0f;
 
 Seek(worldTarget);
 ```
