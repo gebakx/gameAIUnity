@@ -33,7 +33,7 @@ Existen 3 niveles en el movimiento:
 
 - [Patrulla](patrolling.sp.md): movimiento en el que el agente va siguiendo un camino predeterminado
 
-- [Pursue / Evade](mv/pursue.sp.md) (persecución / evasión)
+- [Pursue / Evade](pursue.sp.md) (persecución / evasión)
 
 - [Utilidades matemáticas en Unity para el movimiento](utils.sp.md)
 
