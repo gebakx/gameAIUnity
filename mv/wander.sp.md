@@ -26,6 +26,7 @@ Seek(worldTarget);
 
 De cara a implementar el movimiento se tienen que ajustar los parámetros para que la velocidad sigui relativamente baja y controlar que el punto resultante del *wander* esté en una posición "caminable".
 
+Fijaros que en el *wander* los puntos se van generando de forma aleatoria, no estan prefijados.
 
 ### Demo
 
