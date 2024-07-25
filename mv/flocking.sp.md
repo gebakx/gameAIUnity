@@ -1,36 +1,36 @@
 # Flocking
 
-És el típic moviment grupal d'animals com aus o peixos.
+Es el típico movimiento grupal de animales como aves o peces.
 
 |![](figures/birds.jpg)|
 |:--:| 
-| *Font: [Birds of a Feather Flock](https://blogs.unimelb.edu.au/sciencecommunication/2014/09/06/birdphysics/)* |
+| *Fuente: [Birds of a Feather Flock](https://blogs.unimelb.edu.au/sciencecommunication/2014/09/06/birdphysics/)* |
 
-## Components
+## Componentes
 
-Es basa en la suma de tres regles simples:
+Se basa en la suma de tres reglas simples:
 
-**Cohesion**: centre de masses dels veïns
+**Cohesion**: centro de masas de los vecinos
 
 |![](figures/cohesion.gif)|
 |:--:|
-| *Font: (Reynolds, 1999)* |
+| *Fuente: (Reynolds, 1999)* |
 
-**Match velocity/align**: promig de la velocitat/direcció dels veïns
+**Match velocity/align**: promedio de la velocidad/dirección de los vecinos
 
 |![](figures/alignment.gif)|
 |:--:|
-| *Font: (Reynolds, 1999)* |
+| *Fuente: (Reynolds, 1999)* |
 
-**Separation**: separació dels veïns propers
+**Separation**: separación de los vecinos cercanos
 
 |![](figures/separation.gif)|
 |:--:| 
-| *Font: (Reynolds, 1999)* |
+| *Fuente: (Reynolds, 1999)* |
 
-## Implementació
+## Implementación
 
-Per aquesta implementació utilitzarem un objecte *manager* que instanciarà (*spawn*) els membres del grup. Li associarem del codi següent: 
+Para esta implementación utilizaremos un objeto *manager* que instanciará (*spawn*) a los miembros del grupo. Le asociaremos el código siguiente: 
 
 ```C#
 public class FlockManager : MonoBehaviour {
@@ -64,11 +64,11 @@ public class FlockManager : MonoBehaviour {
 }
 ```
 
-Fixeu-vos que al mètode *Start* està instanciant els membres del grup en posicions i rotacions aleatories al voltant d'ell mateix. Així mateix està assignant-se a sí mateix a la propietat *myManager* de cadascun dels membres per tal de que puguin accedir als altres membres i als paràmetres de l'algorisme:
+Fijaros que el método *Start* está instanciando a los miembros del grupo en posiciones y rotaciones aleatorias alrededor de el mismo. Así mismo está asignándose a la propiedad *myManager* de cada uno de los miembros para que puedan acceder a los otros miembros y a los parámetros del algoritmo:
 
 ![](figures/flockingManager.png)
 
-Fixeu-vos que un dels paràmetres és el *preFab* (model gràfic). A aquest *preFab* li haurem d'afegir el codi següent (que conté les regles del *flocking*):
+Fijaros que uno de los parámetros es el *preFab* (modelo gráfico). A este *preFab* le añadiremos el código siguiente (que contiene las reglas del *flocking*):
 
 ```C#
 public class Flock : MonoBehaviour {
@@ -133,19 +133,19 @@ public class Flock : MonoBehaviour {
 
 ### Demo
 
-A l'arxiu [flocking](demos/flocking.unitypackage) trobareu un exemple d'implementació.
+En el archivo [flocking](demos/flocking.unitypackage) encontraréis un ejemplo de implementación.
 
-### Variants
+### Variantes
 
-- El *flocking* es comporta millor si li afegim molta component aleatòria
+- El *flocking* se comporta mejos si le añadimos mucha componente aleatoria
 
-- L'ús d'un lider és una variant molt utilitzada. Un exemple seria el moviment de eixams d'ocells pel cel o bancs de peixos per un aquari.
+- El uso de un líder és una variante muy utilizada. Un ejemplo seria el movimiento de grupos de pájaros en el cielo o bancos de peces en un acuario
 
-- Altres ampliacions poden ser el control·lar les col·lissions amb objectes (exemple: decoracions d'un aquari) o mirar que estiguin en un entorn control·lat (exemple: aquari)
+- Otras ampliaciones pueden ser el controlar las colisiones con objetos (ejemplo: decoraciones de un acuario) o mirar que esten en un entorno controlado (ejemplo: acuario)
 
-- Noteu que en el codi s'està utilitzant moviment cinemàtic
+- Notar que en el código se está utilizando movimiento cinemático
 
-## Referències
+## Referencias
 
 - Ian Millington. *AI for Games* (3rd ed). CRC Press, 2019.
 
