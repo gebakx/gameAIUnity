@@ -39,7 +39,9 @@ Existeixen 3 nivells en el moviment:
 
 ## Grupals
 
-- [Formació](formacio.md): moviment típic de tropes
+- *Crowd*: moviment típic de multitut de persones (exemple: imatge dels carrers de Nova York). La implementació es fa directament amb un *NavMesh Agent* per cada agent.
+
+- *[Formation](formation.md)*: moviment típic de tropes
 
 - *[Flocking](flocking.md)*: moviment típic de grups d'animals
 
