@@ -31,9 +31,9 @@ Existeixen 3 nivells en el moviment:
 
 - *[Wander](wander.md)*: moviment que simula un passeig aleatòri
 
-- [Patrolling](patrolling.md): moviment en el que l'agent va seguint un camí predeterminat
+- *[Patrolling](patrolling.md)*: moviment en el que l'agent va seguint un camí predeterminat
 
-- [Pursue / Evade](pursue.md) (persecució / evasió)
+- *[Pursue / Evade](pursue.md)* (persecució / evasió)
 
 - [Utilitats matemàtiques en Unity per al moviment](utils.md)
 
