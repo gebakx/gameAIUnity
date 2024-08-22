@@ -6,7 +6,7 @@ La figura següent mostra els components usuals d'un sistema *Game AI*:
 |:--:| 
 | *Font: (Millington, 2019)* |
 
-El presa de decisions (*decision making*) és el segon nivell dins d'una IA. 
+La presa de decisions (*decision making*) és el segon nivell dins d'una IA. 
 
 El problema consisteix en decidir quina és l'acció següent que ha d'emprendre un agent (NPC) donat l'entorn.
 
@@ -30,11 +30,11 @@ En aquest tema aprofundirem en l'ús del *visual scripting*. Aquestes tècniques
 
 A continuació enumerem els algorismes més utilitzats en el presa de decisions ordenats per la complexitat dels problemes que poden resoldre.
 
-- *[Màquines d'estat](fsm.md)* (*Finite States Machines*): és l'algorime més simple. Algorisme basat en estats i transicions entre estats.
+- *[Màquines d'estat](fsm.md)* (*Finite States Machines*): és l'algorisme més simple. Està basat en estats i transicions entre estats.
 
 |![](figures/fsm.png)|
 |:--:| 
-| Màquina d'estat |
+| Màquina d'estats |
 
 - [Behavior Trees](bts.md): algorisme que permet abordar problemes una mica més complexes que les màquines d'estat.
 
@@ -42,7 +42,7 @@ A continuació enumerem els algorismes més utilitzats en el presa de decisions 
 |:--:| 
 | Behavior Tree |
 
-- Planificadors: els sistemes anteriors tenen l'inconvenient de que només tenen en compte una única acció. En jocs d'estrategia, construcció/simulació o *rpg*, necessitem decidir una seqüència d'accions a prendre. 
+- Planificadors: els sistemes anteriors tenen l'inconvenient de que només tenen en compte una única acció. En jocs d'estrategia o *rpgs*, necessitem decidir una seqüència d'accions a prendre. 
 
   - Els sistemes més utilitzats són el *Goal Oriented Action Planning* (GOAP). El conjunt de les diferents possibles seqüències a prendre es representen en un arbre. El problema passa a ser un problema de cerca i es sol utilitzar l'algorisme de Dijkstra per la cerca. La figura següent mostra un exemple d'aquests arbres.
 
@@ -54,7 +54,7 @@ A continuació enumerem els algorismes més utilitzats en el presa de decisions 
 
 - Sistemes basats en regles: són els sistemes més generals. Es fan servir motors d'inferència, sistemes basats en regles o programació funcional. També estan fora del temari de l'assignatura. Dos exemples d'ús són:
 
-  - En programació de videojocs sense motors, es pot compilar la part IA programada en LISP a C++ per integrar-ho amb la part general del joc. El codi següent mostra la funció de fibonacci en Clojure (un dels derivats de LISP). 
+  - En programació de videojocs sense motors, es pot compilar la part IA programada en LISP a C++ per integrar-la amb la part general del joc. El codi següent mostra la funció de fibonacci en Clojure (un dels derivats de LISP). 
 ```clojure
 (defn fibonacci [n]
   (if (< n 2) n (+ (fibonacci (- n 1)) (fibonacci (- n 2)))))
