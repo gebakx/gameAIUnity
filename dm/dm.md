@@ -30,19 +30,17 @@ En aquest tema aprofundirem en l'ús del *visual scripting*. Aquestes tècniques
 
 A continuació enumerem els algorismes més utilitzats en el presa de decisions ordenats per la complexitat dels problemes que poden resoldre.
 
-- *[Màquines d'estat](fsm.md)* (*Finite States Machines*): és l'algorimes més simple.
+- *[Màquines d'estat](fsm.md)* (*Finite States Machines*): és l'algorime més simple. Algorisme basat en estats i transicions entre estats.
 
 |![](figures/fsm.png)|
 |:--:| 
 | Màquina d'estat |
 
-- [Behavior Trees](bts.md)
+- [Behavior Trees](bts.md): algorisme que permet abordar problemes una mica més complexes que les màquines d'estat.
 
-  - Behavior Bricks
-
-  - MonoBehaviourTree?
-
-  - Muse AI
+|![](figures/bt.png)|
+|:--:| 
+| Behavior Tree |
 
 - AI-Planner
 
@@ -52,13 +50,13 @@ A continuació enumerem els algorismes més utilitzats en el presa de decisions 
 
 - [Visual Scripting i màquines d'estat en Unity](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.9/manual/index.html)
 
-- article BTs
+- Chris Simpson. [Behavior trees for AI: How they work](https://www.gamedeveloper.com/programming/behavior-trees-for-ai-how-they-work). Game Developer, 2014.
 
-- Behavior bricks
+- [Muse Behavior](https://docs.unity3d.com/Packages/com.unity.muse.behavior@0.10/manual/index.html)
 
-- Muse AI
+- [Muse AI](https://unity.com/products/muse)
 
-- AI Planner
+- [AI Planner](https://docs.unity3d.com/Packages/com.unity.ai.planner@0.3/manual/index.html)
 
-- Projecte Arkadia-clojure
+- [Projecte Arcadia-clojure](https://arcadia-unity.github.io/)
 

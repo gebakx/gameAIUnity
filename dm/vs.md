@@ -2,7 +2,7 @@
 
 En aquest document mostrarem com funciona el *Visual Scripting* de Unity a partir d'un exemple: l'*steering pursue*. Recordeu que teniu el codi en C# a l'apartat de moviment.
 
-Per accedir al mòdul heu d'anar al `menú -- Window -- Visual Scripting -- Visual Scripting Graph` o amb el botó dret crear un nou `Script Graph`. Els script graphs són els equivalents als scripts C#; contenen la lògica dels agents.
+Per accedir al mòdul heu d'anar al `menú - Window - Visual Scripting - Visual Scripting Graph` o amb el botó dret crear un nou `Script Graph`. Els script graphs són els equivalents als scripts C#; contenen la lògica dels agents.
 
 El següent component important del mòdul és el component *Script Machine* que heu d'afegir a un agent per tal de poder executar un graph.
 
