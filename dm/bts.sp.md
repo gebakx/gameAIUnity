@@ -1,47 +1,47 @@
 # Behavior Trees
 
-**Comentaris previs**:
+**Comentarios previos**:
 
-El disseny d'arbres de comportament és una tasca no trivial. Us recomano que mireu l'article [Behavior trees for AI: How they work](https://www.gamedeveloper.com/programming/behavior-trees-for-ai-how-they-work) per començar.
+El diseño de árboles de comportamiento es una tarea no trivial. Os recomiendo que leais el articulo [Behavior trees for AI: How they work](https://www.gamedeveloper.com/programming/behavior-trees-for-ai-how-they-work) para empezar.
 
-Exiteixen dos mòduls anomenats *Muse* en Unity:
+Existen dos módulos llamados *Muse* en Unity:
 
-- *Muse Behavior*: mòdul per treballar amb *behavior trees*. Necessita instal·lació externa. És el que farem servir.
+- *Muse Behavior*: módulo para trabajar con *behavior trees*. Necesita instalación externa. Es el que utilizaremos.
 
-- *Muse AI*: mòdul de pagament que té un component *behavior* que permet generar els *behavior trees* amb tècniques d'IA generativa.
+- *Muse AI*: módulo de pago que tiene un componente *behavior* que permite generar los *behavior trees* con técnicas de IA generativa.
 
-**Instal·lació en el projecte del Muse Behavior**:
+**Instalación en el proyecto del Muse Behavior**:
 
-Per poder utilitzar aquest component s'ha d'instal·lar previament. Aneu al menú, *Window - Package Manager*, cliqueu al **+** ubicat a la part de dalt a l'esquerra i *Add package by name..*. Introduiu el nom **com.unity.muse.behavior**. Un cop instal·lat, podeu tancar el *Package Manager*.
+Para poder utilizar este componente se tiene que instalar previamente. Ir al menú, *Window - Package Manager*, clicad en lel **+** ubicado en la parte superior izquierda y *Add package by name..*. Introducir el nombre **com.unity.muse.behavior**. Una vez instalado, podéis cerrar el *Package Manager*.
 
-**Exemple**:
+**Ejemplo**:
 
-En aquest document mostrarem com funcionen els *behavior trees* en Unity a partir d'un exemple: un policia anirà (*seek*) cap a un lladre quan estigui lluny d'ell i l'anirà "mirant/vigilant" quan estigui a prop.
+En este documento mostraremos como funcionan los *behavior trees* en Unity a partir de un ejemplo: un policia irá (*seek*) hacia un ladrón cuando esté lejos de él y ira "mirándolo/vigilándolo" cuando esté cerca.
 
-Utilitzarem el *Muse Behavior Agent* com a component per executar els *behavior trees*:
+Utilizaremos el *Muse Behavior Agent* como componente para ejecutar los *behavior trees*:
 
 |![](figures/copInspector3.png)|
 |:--:| 
-| Component *Muse Behavior Agent* |
+| Componente *Muse Behavior Agent* |
 
-Tenim la *Blackboard* com a mecanisme de compartició de variables entre els *behavior trees* i l'entorn.
+Tenemos la *Blackboard* como mecanismo de compartición de variables entre los *behavior trees* y el entorno.
 
-A continuació teniu l'implementació dels *behavior trees*:
+A continuación tenéis la implementación de los *behavior trees*:
 
 |![](figures/bt.png)|
 |:--:| 
 | Behavior Tree |
 
-L'*Acció* `Self moves to robber` té les propietats (al *Node Inspector*):
+La *Acción* `Self moves to robber` tiene las propiedades (en el *Node Inspector*):
 
-| propietat | valor |
+| propiedad | valor |
 |:--|:--| 
 | Agent | Self |
 | Target | robber |
 | Speed | 2 |
 | Distance Threshold | 3 |
 
-La condició afegida al node *Abort If* està definida per nosaltres i té el codi:
+La condición añadida al nodo *Abort If* está definida por nosotros y tiene el código:
 
 ```C#
 using System;
@@ -64,7 +64,7 @@ public class farAway : Condition
 }
 ```
 
-Les implementacions de *Behavior Trees* solen tenir els components bàsics i facilitat per implementar accions i condicions. El codi anterior us serveix com a exemple de condició. A continuació teniu un exemple d'acció (que no s'utilitza en la implementació d'aquest document) que para el moviment de l'agent:
+Las implementaciones de *Behavior Trees* suelen tener los componentes básicos y facilidad para implementar acciones y condiciones. El código anterior os sirve como ejemplo de condición. A continuación tenéis un ejemplo de acción (que no se utiliza en la implementación de este documento) que para el movimiento del agente:
 
 ```C#
 using System;
@@ -102,11 +102,11 @@ public class Stop : Action
 
 ```
 
-## Implementació
+## Implementación
 
 - [Behavior Trees](demos/bts.unitypackage)
 
-## Referències
+## Referencias
 
 - [Muse Behavior](https://docs.unity3d.com/Packages/com.unity.muse.behavior@0.10/manual/index.html)
 
