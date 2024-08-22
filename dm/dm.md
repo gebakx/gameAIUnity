@@ -42,18 +42,25 @@ A continuació enumerem els algorismes més utilitzats en el presa de decisions 
 |:--:| 
 | Behavior Tree |
 
-- AI-Planner
+- Planificadors: els sistemes anteriors tenen l'inconvenient de que només tenen en compte una única acció. En jocs d'estrategia, construcció/simulació o *rpg*, necessitem decidir una seqüència d'accions a prendre. 
+
+  - Els sistemes més utilitzats són el *Goal Oriented Action Planning* (GOAP). El conjunt de les diferents possibles seqüències a prendre es representen en un arbre. El problema passa a ser un problema de cerca i es sol utilitzar l'algorisme de Dijkstra per la cerca. La figura següent mostra un exemple d'aquests arbres.
+
+  - *[AI Planner](https://docs.unity3d.com/Packages/com.unity.ai.planner@0.3/manual/index.html)*: és una llibreria Unity que implementa un planificador per *decision making*. Els planificadors queden fora del temari de l'assignatura.
 
 |![](figures/PlanVisualizer.png)|
 |:--:| 
 | *font*: [AIPlanner documentation](https://docs.unity3d.com/Packages/com.unity.ai.planner@0.3/manual/PlanVisualizer.html) |
 
-- Llenguatges funcionals
+- Sistemes basats en regles: són els sistemes més generals. Es fan servir motors d'inferència, sistemes basats en regles o programació funcional. També estan fora del temari de l'assignatura. Dos exemples d'ús són:
 
+  - En programació de videojocs sense motors, es pot compilar la part IA programada en LISP a C++ per integrar-ho amb la part general del joc. El codi següent mostra la funció de fibonacci en Clojure (un dels derivats de LISP).
 ```clojure
 (defn fibonacci [n]
   (if (< n 2) n (+ (fibonacci (- n 1)) (fibonacci (- n 2)))))
 ```
+
+  - El projecte [Arcadia](https://arcadia-unity.github.io/) està portant *Clojure* a Unity.
 
 ## Referències
 
