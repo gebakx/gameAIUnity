@@ -54,7 +54,7 @@ A continuació enumerem els algorismes més utilitzats en el presa de decisions 
 
 - Sistemes basats en regles: són els sistemes més generals. Es fan servir motors d'inferència, sistemes basats en regles o programació funcional. També estan fora del temari de l'assignatura. Dos exemples d'ús són:
 
-  - En programació de videojocs sense motors, es pot compilar la part IA programada en LISP a C++ per integrar-ho amb la part general del joc. El codi següent mostra la funció de fibonacci en Clojure (un dels derivats de LISP).
+  - En programació de videojocs sense motors, es pot compilar la part IA programada en LISP a C++ per integrar-ho amb la part general del joc. El codi següent mostra la funció de fibonacci en Clojure (un dels derivats de LISP). 
 ```clojure
 (defn fibonacci [n]
   (if (< n 2) n (+ (fibonacci (- n 1)) (fibonacci (- n 2)))))
