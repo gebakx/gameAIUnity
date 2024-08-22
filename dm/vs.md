@@ -10,7 +10,7 @@ El següent component important del mòdul és el component *Script Machine* que
 |:--:| 
 | Component *Script Machine* |
 
-Un cop activeu alguna de les opcions de dalt, veureu que apareixen certs components a la `Hirarchy` (*VisualScripting SceneVariables*) i l'`Inspector` (*Variables*) de l'agent implicat. Corresponen a un dels mecanismes de compartició d'informació entre els graphs i la resta de l'entorn. També podeu crear *subgraphs* que tinguin paràmetres d'entrada i/o sortida.
+Un cop activeu alguna de les opcions de dalt, veureu que apareixen certs components a la `Hierarchy` (*VisualScripting SceneVariables*) i l'`Inspector` (*Variables*) de l'agent implicat. Corresponen a un dels mecanismes de compartició d'informació entre els graphs i la resta de l'entorn. També podeu crear *subgraphs* que tinguin paràmetres d'entrada i/o sortida.
 
 La figura següent mostra el graph implementació del *pursue*:
 
