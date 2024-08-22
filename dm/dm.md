@@ -50,12 +50,10 @@ A continuació enumerem els algorismes més utilitzats en el presa de decisions 
 
 - Llenguatges funcionals
 
-| ```clojure
+```clojure
 (defn fibonacci [n]
   (if (< n 2) n (+ (fibonacci (- n 1)) (fibonacci (- n 2)))))
-``` |
-|:--:| 
-| Funció de fibonacci en clojure |
+```
 
 ## Referències
 
