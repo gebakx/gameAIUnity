@@ -1,8 +1,8 @@
 # Finite State Machines
 
-En aquest document mostrarem com funcionen les màquines d'estat en Unity a partir d'un exemple: un policia anirà perseguint a un lladre quan estigui lluny d'ell i l'anirà "mirant/vigilant" quan estigui a prop.
+En aquest document mostrarem com funcionen les màquines d'estats en Unity a partir d'un exemple: un policia anirà perseguint a un lladre quan estigui lluny d'ell i l'anirà "mirant/vigilant" quan estigui a prop.
 
-Les màquines d'estat estàn integrades amb el mecanisme del *Visual Scripting*. Però utilitzarem el *State Machine* com a component per executar les màquines d'estat:
+Les màquines d'estats estàn integrades amb el mecanisme del *Visual Scripting*. Però utilitzarem el *State Machine* com a component per executar les màquines d'estats:
 
 |![](figures/copInspector2.png)|
 |:--:| 
@@ -12,7 +12,7 @@ Per implementar el codi dels estats i les transicions utilitzarem graphs del *Vi
 
 |![](figures/fsm.png)|
 |:--:| 
-| Màquina d'estat |
+| Màquina d'estats |
 
 Per l'estat *pursue* utilitzarem el graph `pursue` de l'exemple de *Visual Scripting*. A continuació teniu l'implementació de l'estat *look* i les dues transicions:
 
@@ -35,7 +35,7 @@ Per l'estat *pursue* utilitzarem el graph `pursue` de l'exemple de *Visual Scrip
 
 ## Referències
 
-- [Visual Scripting i màquines d'estat en Unity](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.9/manual/index.html)
+- [Visual Scripting i màquines d'estats en Unity](https://docs.unity3d.com/Packages/com.unity.visualscripting@1.9/manual/index.html)
 
 - Asset [Easy Primitive People](https://assetstore.unity.com/packages/3d/characters/easy-primitive-people-161846)
 
