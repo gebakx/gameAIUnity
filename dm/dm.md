@@ -44,7 +44,18 @@ A continuació enumerem els algorismes més utilitzats en el presa de decisions 
 
 - AI-Planner
 
+|![](figures/PlanVisualizer.png)|
+|:--:| 
+| *font*: [AIPlanner documentation](https://docs.unity3d.com/Packages/com.unity.ai.planner@0.3/manual/PlanVisualizer.html) |
+
 - Llenguatges funcionals
+
+| ```clojure
+(defn fibonacci [n]
+  (if (< n 2) n (+ (fibonacci (- n 1)) (fibonacci (- n 2)))))
+``` |
+|:--:| 
+| Funció de fibonacci en clojure |
 
 ## Referències
 
