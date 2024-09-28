@@ -41,7 +41,7 @@ Existen 3 niveles en el movimiento:
 
 - *Crowd*: movimiento típico de multitud de personas (ejemplo: imagen de las calles de Nueva York). La implementación se realiza directamente con un *NavMesh Agent* para cada agente.
 
-- *[Formation](formacio.sp.md)*: movimiento típico de tropas
+- *[Formation](formation.sp.md)*: movimiento típico de tropas
 
 - *[Flocking](flocking.sp.md)*: movimiento típico de grupos de animales
 
