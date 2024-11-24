@@ -42,10 +42,13 @@ En aquest punt us hauria de funcionar el següent:
 mlagents-learn
 ```
 
-![](mlagentslearn.png)
+![captura](mlagents-learn.png)
 
 
 **Instal·lació en el projecte Unity**:
+
+Per a cada projecte Unity que utilitzi el ML-Agents heu d'afegir un parell d'assets del component que heu clonat de *github*.
+
 
 - [Referència oficial](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md)
 
