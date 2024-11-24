@@ -1,0 +1,38 @@
+# MLAgents Instructions: 
+
+## Steps Python: 
+1) Install anaconda from here: https://repo.anaconda.com/archive/Anaconda3-2022.10-Windows-x86_64.exe
+2) Open the Anaconda Prompt
+3) Setup and environment: 
+  - conda create --name ChoseTheNameThatYouLikeTheMost python=3.6
+  - proceed: Y
+  - Activate environment: 
+	- conda activate ChoseTheNameThatYouLikeTheMost
+	- Everitime you use mlagents, you will have to run this line
+  - Check python is the right version: 
+	- python --version
+	- Should return 3.6 
+4) Install packages:
+	- pip install mlagents
+	- pip install mlagents_envs
+	- pip install gym_unity
+	- pip install torch
+5) run mlagents-learn. this should ask you permission, which you should give
+Note: On UPC computers you can skip step 1
+
+## Steps Unity: 
+1) Open git bash
+2) Clone repo: git clone --branch release_19 https://github.com/Unity-Technologies/ml-agents.git
+3) Open Unity Hub
+4) Open the Project folder inside 
+5) Some errors will appear
+6) Open package manager -> + -> add package from disk -> com.ml-agents
+7) Open package manager -> + -> add package from disk -> com.ml-agents.extensions
+8) Open package manager -> In Unity Registry -> Input System
+9) Unity will ask to restart. Restart
+10) Now you can import the scenes inside Assets->ML-Agents->Examples and try them
+
+
+You have all ready to start. Follow here: https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Getting-Started.md
+
+Remember, everytime you start workingg with MLAgents, you have to open your unity project AND Run the python scripts as depicted in "getting started"

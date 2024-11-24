@@ -4,37 +4,60 @@ En aquest apartat veurem com entrenar agents amb aprenentatge per reforç amb [M
 
 ## Guia d'instal·lació
 
-- [Referència oficial](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md)
+Per instal·lar el ML-Agents hem de seguir una sèrie de pasos que estan descrits a la (documentació oficial](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md) del paquet.
 
-## Instal·lació aproximada (per a Windows)
+Les probes les hem realitzat amb una màquina Linux.
 
+**Requeriments**:
 
+- Unity versió 2023.2 o superior.
 
-- Pantalla unity-learn funcionant
+- Python entre 3.10.1 i 2.10.12.
+
+**Instal·lació en una màquina**:
+
+El primer pas es obrir un terminal i instal·lar la llibreria **pytorch** (xarxes neuronals):
+
+```
+pip install torch
+```
+
+A continuació hem de clonar el component de *github*:
+
+```
+git clone --branch release_22 https://github.com/Unity-Technologies/ml-agents.git
+```
+
+A continuació instal·lem els dos paquets que connecten el *Python* amb el *ML-Agents* i *Unity*:
+
+```
+cd ml-agents/
+python3 -m pip install ./ml-agents-envs
+python3 -m pip install ./ml-agents
+```
+
+En aquest punt us hauria de funcionar el següent:
+
+```
+mlagents-learn
+```
+
 ![](mlagentslearn.png)
 
-### Steps in Unity: 
 
-1. Clone MLAgents github repository 
+**Instal·lació en el projecte Unity**:
 
-   - `git clone --branch release_19 https://github.com/Unity-Technologies/ml-agents.git`
+- [Referència oficial](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md)
 
-2. Go to Unity
 
-3. Open package manager -> + -> add package from disk -> com.ml-agents
+**Nota**: per instal·lar-lo en una màquina Windows recomanen utilitzar l'Anaconda. A l'arxiu [mlAgentsGuide.txt](mlAgentsGuide.txt) teniu una petita que heu d'adaptar amb el que hi ha més amunt.
 
-4. Open package manager -> + -> add package from disk -> com.ml-agents.extensions
-
-## Enllaç alternatiu:
-
-[https://virajvaitha.medium.com/unity-ml-agents-2022-installation-e8af1eab2dd](https://virajvaitha.medium.com/unity-ml-agents-2022-installation-e8af1eab2dd)
 
 ## Introducció
 
+- components: recompenses, observacions, actuadors (continu vs discret), raycasting, arxiu yml
+
 - Tutorial (Roller ball)
-
-  - Components: observacions, recompenses, accions, fitxer de configuració
-
   - Demo: funcionant
 
 ## Consells per a l'entrenament
