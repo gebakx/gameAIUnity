@@ -4,7 +4,7 @@ En aquest apartat veurem com entrenar agents amb aprenentatge per reforç amb [M
 
 ## Guia d'instal·lació
 
-Per instal·lar el ML-Agents hem de seguir una sèrie de pasos que estan descrits a la (documentació oficial](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md) del paquet.
+Per instal·lar el ML-Agents hem de seguir una sèrie de pasos que estan descrits a la [documentació oficial](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md) del paquet.
 
 Les probes les hem realitzat amb una màquina Linux.
 
@@ -57,10 +57,15 @@ Repetiu el procés amb la carpeta *com.unity.ml-agents.extensions*.
 
 En aquest punt us haurien de sortir els paquets *ML Agents* i *ML Agents Extensions* tal i com mostra la figura de dalt.
 
-**Nota**: per instal·lar-lo en una màquina Windows recomanen utilitzar l'Anaconda. A l'arxiu [mlAgentsGuide.txt](mlAgentsGuide.txt) teniu una petita que heu d'adaptar amb el que hi ha més amunt.
+**Nota**: per instal·lar-lo en una màquina Windows recomanen utilitzar l'Anaconda. A l'arxiu [mlagentsGuide.txt](mlagentsGuide.txt) teniu una petita que heu d'adaptar amb el que hi ha més amunt.
 
 
 ## Introducció
+
+El ML-Agents té com a component principal l'aprenentatge per reforç (*Reinforcement Learning*):
+
+![esquema](reinforcement.png)
+[font: mathworks](https://de.mathworks.com/discovery/reinforcement-learning.html)
 
 - components: recompenses, observacions, actuadors (continu vs discret), raycasting, arxiu yml
 
