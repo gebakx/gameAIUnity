@@ -64,8 +64,12 @@ En aquest punt us haurien de sortir els paquets *ML Agents* i *ML Agents Extensi
 
 El ML-Agents té com a component principal l'aprenentatge per reforç (*Reinforcement Learning*):
 
-![esquema](reinforcement.png)
-[font: mathworks](https://de.mathworks.com/discovery/reinforcement-learning.html)
+![esquema](rl.png)
+[font: thomassimonini.medium](https://thomassimonini.medium.com/q-learning-lets-create-an-autonomous-taxi-part-2-2-8cbafa19d7f5)
+
+L'aprenentatge per reforç conté dos grans elements: l'*agent* per al que volem fer aprendre un comportament i l'*entorn* en el que es mou. El procés consisteix en un bucle en el que l'entorn dona una descripció del món a l'agent (*observacions*), l'agent decideix una acció a efectuar (*actuadors*) i l'entorn li torna una *recompensa* (que pot ser negativa) en funció de com ho hagi fet l'agent.
+
+A continuació veurem com declarar aquests components en un projecte Unity per aprendre el comportament d'un agent.
 
 - components: recompenses, observacions, actuadors (continu vs discret), raycasting, arxiu yml
 
