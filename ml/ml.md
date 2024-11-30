@@ -69,7 +69,7 @@ El ML-Agents té com a component principal l'aprenentatge per reforç (*Reinforc
 
 L'aprenentatge per reforç conté dos grans elements: l'*agent* per al que volem fer aprendre un comportament i l'*entorn* en el que es mou. El procés consisteix en un bucle en el que l'entorn dona una descripció del món a l'agent (*observacions*), l'agent decideix una acció a efectuar (*actuadors*) i l'entorn li torna una *recompensa* (que pot ser negativa) en funció de com ho hagi fet l'agent.
 
-A continuació veurem com declarar aquests components en un projecte Unity per aprendre el comportament d'un agent. Tot es fa mitjançant un *script* amb una classe de tipus *Agent* que conté tota la lògica de l'agent i un arxiu de configuració *.yml* que conté els paràmetres de l'aprenentatge.
+A continuació veurem com declarar aquests components en un projecte Unity per aprendre el comportament d'un agent. Tot es fa mitjançant un *script* amb una classe de tipus *Agent* que conté tota la lògica de l'agent i un arxiu de configuració *.yaml* que conté els paràmetres de l'aprenentatge.
 
 En afegir l'script amb la classe *Agent*, ens apareixerà automàticament el component *Behavior Parameters* on podrem establir paràmetres com el tipus d'observacions o el model entrenat. Adicionalment, haurem d'afegir-li el component *Decision Requester* a l'agent.
 
@@ -85,7 +85,7 @@ Les definirem mitjantçant un mètode anomenat *CollectObservations*:
     }
 ```
 
-A l'exemple estem afegint com a observacions la posició i cap a on està mirant l'agent en qüestió. Cadascun d'aquest dos tenen una mida de 3, ja que són vectors. Haurem d'especificar als *Behavior Parameters - Vecotr Observation - Space Size* una mida de 6.
+A l'exemple estem afegint com a observacions la posició i cap a on està mirant l'agent en qüestió. Cadascun d'aquest dos tenen una mida de 3, ja que són vectors. Haurem d'especificar als *Behavior Parameters - Vector Observation - Space Size* una mida de 6.
 
 Uns dels sensors més utilitzats en aquest tipus d'aprenentatge són els "Ray Casts". ML-Agents en proporciona un component per tractar-los automàticament. Només hem d'afegir el component *Ray Cast Sensor 3D* al nostre agent i configurar les seves propietats. Això inclou el *tags* dels objectes que volem detectar. En afegir aquest component, no cal afegir res al mètode *CollectObservation*. Ja ho fa ell tot sol.
 
@@ -123,9 +123,38 @@ en que es veu el dir cap a l'esquerra com una acció discreta.
 
 ### Recompenses
 
+Per afegir recompenses teniu dos mètodes:
+```c#
+    AddReward(-0.01f);
+    SetReward(+1f);
+```
+
+El primer afegir una recompensa (s'utilitza per anar afegint recompenses petites accumulatives) i el segon n'estableix (s'utilitza en recompenses finals en cas d'èxit o fracas).
+
+Aquestes últimes solen venir acompanyades a una crida al mètode *EndEpisode();* que fa acabar l'episodi d'entrenament actual. Disposem així mateix del mètode *OnEpisodeBegin()* per inicialitzar els episodis.
+
 ### Paràmetres de l'algorisme d'entrenament
 
-- components: recompenses, observacions, actuadors (continu vs discret), raycasting, arxiu yml
+Els paràmetre de l'entrenament s'estableixen en un arxiu *yaml*
+
+```
+behaviors:
+  RollerBall:                # nom de l'agent            
+    trainer_type: ppo        # algorisme de reinforcement learning: ppo, sac...
+    hyperparameters:
+        ...
+    network_settings:
+      normalize: false
+      hidden_units: 128      # nombre de neurones de la xarxa neuronal
+      num_layers: 2          # nombre de capes de la xarxa neuronal
+    reward_signals:
+        ...
+    max_steps: 500000        # nombre d'iteracions
+    summary_freq: 10000      # freqüència de report de les recompenses
+    ...
+```
+
+Els paràmetres mostrats són alguns dels més importants. Mireu la [documentació](https://unity-technologies.github.io/ml-agents/Training-Configuration-File/) per obtenir més informació.
 
 ## Consells per a l'entrenament
 
