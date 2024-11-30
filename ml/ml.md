@@ -47,11 +47,15 @@ mlagents-learn
 
 **Instal·lació en el projecte Unity**:
 
-Per a cada projecte Unity que utilitzi el ML-Agents heu d'afegir un parell d'assets del component que heu clonat de *github*.
+Per a cada projecte Unity que utilitzi el ML-Agents heu d'afegir un parell d'assets del component que heu clonat de *github*. Heu de mostrar el *package manager* mitjançant el menú, opció *Window* subopció *Package Manager*:
 
+![captura](package-manager.png)
 
-- [Referència oficial](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md)
+Cliqueu en el botó *+* que hi ha a la part de dalt a l'esquerra i *Add package from disk...*. En aquest punt haureu de seleccionar l'arxiu *package.json* que trobareu a la carpeta *com.unity.ml-agents*.
 
+Repetiu el procés amb la carpeta *com.unity.ml-agents.extensions*. 
+
+En aquest punt us haurien de sortir els paquets *ML Agents* i *ML Agents Extensions* tal i com mostra la figura de dalt.
 
 **Nota**: per instal·lar-lo en una màquina Windows recomanen utilitzar l'Anaconda. A l'arxiu [mlAgentsGuide.txt](mlAgentsGuide.txt) teniu una petita que heu d'adaptar amb el que hi ha més amunt.
 
