@@ -91,6 +91,36 @@ Uns dels sensors més utilitzats en aquest tipus d'aprenentatge són els "Ray Ca
 
 ### Accions
 
+Hi ha dos tipus d'accions que podem crear: continues (força a aplicar a un objecte) o discrites (girar a l'esquerra).
+
+Si utilitzem les continues tindrem quelcom com:
+```c#
+    public override void OnActionReceived(ActionBuffers actionBuffers)
+    {
+        // Actions, size = 2
+        Vector3 controlSignal = Vector3.zero;
+        controlSignal.x = actionBuffers.ContinuousActions[0];
+        controlSignal.z = actionBuffers.ContinuousActions[1];
+        rBody.AddForce(controlSignal * forceMultiplier);
+    }
+```
+en que s'està aplicant una força a un objecte per control·lar el seu moviment.
+
+Si utilitzem accions discretes:
+```c#
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+        if (actions.DiscreteActions[1] == 1)
+        {
+            transform.Rotate(transform.up * -turnSpeed * Time.deltaTime);
+        } 
+        else if (actions.DiscreteActions[1] == 2)
+        ...
+    }
+```
+en que es veu el dir cap a l'esquerra com una acció discreta.
+
+
 ### Recompenses
 
 ### Paràmetres de l'algorisme d'entrenament
