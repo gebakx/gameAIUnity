@@ -158,21 +158,37 @@ Els paràmetres mostrats són alguns dels més importants. Mireu la [documentaci
 
 ## Consells per a l'entrenament
 
-- Heuristics
+El disseny de sistemes d'aprenentatge per reforç no és una tasca senzilla. Aquí us oferim una sèrie de consells per orientar-vos en aquesta tasca.
 
-- Problemes semblants i exemples mlagents.
+El primer consell és mirar algun exemple semblant al que tracteu de solucionar i partir de la solució que propossen. Un recurs molt interessant és el de la [llista d'exemples del propi ML-Agents](https://unity-technologies.github.io/ml-agents/Learning-Environment-Examples/).
 
-- Tutorial (Roller ball)
-  - Demo: funcionant
+El segon consell és que un cop programat l'agent el probeu amb el mètode *Heuristics* que admet el control manual de l'agent i el probeu a consciència:
 
-- Raycasting
+```c#
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+        ...
+        var actions = actionsOut.DiscreteActions;
+        actions[0] = v;
+        actions[1] = h;
+    }
+```
 
-- Curriculum learning
+La complexitat del problema a tractar requerirà una complexitat equivalent per tal d'aprendre un model útil. Els paràmetres més importants a nivell de complexitat seran:
 
-- Enllaç al TFG de Haonan
+- el tipus d'algorisme: *ppo*, *sac*, *curiosity*, *curriculum learning*...
 
-- Complexitat: mida xarxa, epochs, curiosity, sac vs ??
+- les observacions i recompenses del sistema
+
+- el nombre de capes i neurones de la xarxa neuronal
+
+- el nombre d'iteracions
+
+Si el sistema no és capaç de trobar un model vàlid, reviseu primerament els paràmetres anteriors.
+
 
 ## Referències
 
 - [Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents)
+
+- Haonan Jin. [NPC's en Karting Game](https://upcommons.upc.edu/handle/2117/411664), 2024. [Github](https://github.com/YudaLegend/TFG-ML-AGENTS)
