@@ -67,7 +67,7 @@ El ML-Agents té com a component principal l'aprenentatge per reforç (*Reinforc
 ![esquema](rl.png)
 [font: thomassimonini.medium](https://thomassimonini.medium.com/q-learning-lets-create-an-autonomous-taxi-part-2-2-8cbafa19d7f5)
 
-L'aprenentatge per reforç conté dos grans elements: l'*agent* per al que volem fer aprendre un comportament i l'*entorn* en el que es mou. El procés consisteix en un bucle en el que l'entorn dona una descripció del món a l'agent (*observacions*), l'agent decideix una acció a efectuar (*actuadors*) i l'entorn li torna una *recompensa* (que pot ser negativa) en funció de com ho hagi fet l'agent.
+L'aprenentatge per reforç conté dos grans elements: l'*agent* per al que volem fer aprendre un comportament i l'*entorn* en el que es mou. El procés consisteix en un bucle en el que l'entorn dona una descripció del món a l'agent (*observacions*), l'agent decideix una acció a efectuar (mitjançant *actuadors*) i l'entorn li torna una *recompensa* (que pot ser negativa) en funció de com ho hagi fet l'agent.
 
 A continuació veurem com declarar aquests components en un projecte Unity per aprendre el comportament d'un agent. Tot es fa mitjançant un *script* amb una classe de tipus *Agent* que conté tota la lògica de l'agent i un arxiu de configuració *.yaml* que conté els paràmetres de l'aprenentatge.
 
@@ -87,11 +87,11 @@ Les definirem mitjantçant un mètode anomenat *CollectObservations*:
 
 A l'exemple estem afegint com a observacions la posició i cap a on està mirant l'agent en qüestió. Cadascun d'aquest dos tenen una mida de 3, ja que són vectors. Haurem d'especificar als *Behavior Parameters - Vector Observation - Space Size* una mida de 6.
 
-Uns dels sensors més utilitzats en aquest tipus d'aprenentatge són els "Ray Casts". ML-Agents en proporciona un component per tractar-los automàticament. Només hem d'afegir el component *Ray Cast Sensor 3D* al nostre agent i configurar les seves propietats. Això inclou el *tags* dels objectes que volem detectar. En afegir aquest component, no cal afegir res al mètode *CollectObservation*. Ja ho fa ell tot sol.
+Uns dels sensors més utilitzats en aquest tipus d'aprenentatge són els "Ray Casts". ML-Agents en proporciona un component per tractar-los automàticament. Només hem d'afegir el component *Ray Cast Sensor 3D* al nostre agent i configurar les seves propietats. Això inclou els *tags* dels objectes que volem detectar. En afegir aquest component, no cal afegir res al mètode *CollectObservation*. Ja ho fa ell tot sol.
 
 ### Accions
 
-Hi ha dos tipus d'accions que podem crear: continues (força a aplicar a un objecte) o discrites (girar a l'esquerra).
+Hi ha dos tipus d'accions que podem crear: continues (força a aplicar a un objecte) o discretes (girar a l'esquerra).
 
 Si utilitzem les continues tindrem quelcom com:
 ```c#
@@ -118,7 +118,7 @@ Si utilitzem accions discretes:
         ...
     }
 ```
-en que es veu el dir cap a l'esquerra com una acció discreta.
+en que es veu el gir cap a l'esquerra com una acció discreta.
 
 
 ### Recompenses
@@ -129,28 +129,28 @@ Per afegir recompenses teniu dos mètodes:
     SetReward(+1f);
 ```
 
-El primer afegir una recompensa (s'utilitza per anar afegint recompenses petites accumulatives) i el segon n'estableix (s'utilitza en recompenses finals en cas d'èxit o fracas).
+El primer afegeix una recompensa (s'utilitza per anar afegint recompenses petites acumulatives) i el segon n'estableix (s'utilitza en recompenses finals en cas d'èxit o fracas).
 
 Aquestes últimes solen venir acompanyades a una crida al mètode *EndEpisode();* que fa acabar l'episodi d'entrenament actual. Disposem així mateix del mètode *OnEpisodeBegin()* per inicialitzar els episodis.
 
 ### Paràmetres de l'algorisme d'entrenament
 
-Els paràmetre de l'entrenament s'estableixen en un arxiu *yaml*
+Els paràmetres de l'entrenament s'estableixen en un arxiu *yaml*:
 
 ```
 behaviors:
-  RollerBall:                # nom de l'agent            
-    trainer_type: ppo        # algorisme de reinforcement learning: ppo, sac...
+  RollerBall:                # nombre del agente            
+    trainer_type: ppo        # algoritmo de reinforcement learning: ppo, sac...
     hyperparameters:
         ...
     network_settings:
       normalize: false
-      hidden_units: 128      # nombre de neurones de la xarxa neuronal
-      num_layers: 2          # nombre de capes de la xarxa neuronal
+      hidden_units: 128      # número de neuronas de la red neuronal
+      num_layers: 2          # número de capas de la red neuronal
     reward_signals:
         ...
-    max_steps: 500000        # nombre d'iteracions
-    summary_freq: 10000      # freqüència de report de les recompenses
+    max_steps: 500000        # número de iteraciones
+    summary_freq: 10000      # frecuencia de report de les recompensas
     ...
 ```
 
