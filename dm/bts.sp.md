@@ -4,15 +4,11 @@
 
 El diseño de árboles de comportamiento es una tarea no trivial. Os recomiendo que leais el articulo [Behavior trees for AI: How they work](https://www.gamedeveloper.com/programming/behavior-trees-for-ai-how-they-work) para empezar.
 
-Existen dos módulos llamados *Muse* en Unity:
-
-- *Muse Behavior*: módulo para trabajar con *behavior trees*. Necesita instalación externa. Es el que utilizaremos.
-
-- *Muse AI*: módulo de pago que tiene un componente *behavior* que permite generar los *behavior trees* con técnicas de IA generativa.
+Unity contiene un paquete *Unity Behavior* para trabajar con *behavior trees*. Necesita instalación externa. Es el que utilizaremos.
 
 **Instalación en el proyecto del Muse Behavior**:
 
-Para poder utilizar este componente se tiene que instalar previamente. Ir al menú, *Window - Package Manager*, clicad en lel **+** ubicado en la parte superior izquierda y *Add package by name..*. Introducir el nombre **com.unity.muse.behavior**. Una vez instalado, podéis cerrar el *Package Manager*.
+Para poder utilizar este componente se tiene que instalar previamente. Ir al menú, *Window - Package Manager*, clicad en lel **+** ubicado en la parte superior izquierda y *Add package by name..*. Introducir el nombre **com.unity.behavior**. Una vez instalado, podéis cerrar el *Package Manager*.
 
 **Ejemplo**:
 
