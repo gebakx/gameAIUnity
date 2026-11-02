@@ -6,7 +6,7 @@ El diseño de árboles de comportamiento es una tarea no trivial. Os recomiendo 
 
 Unity contiene un paquete *Unity Behavior* para trabajar con *behavior trees*. Necesita instalación externa. Es el que utilizaremos.
 
-**Instalación en el proyecto del Muse Behavior**:
+**Instalación en el proyecto del Unity Behavior**:
 
 Para poder utilizar este componente se tiene que instalar previamente. Ir al menú, *Window - Package Manager*, clicad en lel **+** ubicado en la parte superior izquierda y *Add package by name..*. Introducir el nombre **com.unity.behavior**. Una vez instalado, podéis cerrar el *Package Manager*.
 
@@ -14,11 +14,11 @@ Para poder utilizar este componente se tiene que instalar previamente. Ir al men
 
 En este documento mostraremos como funcionan los *behavior trees* en Unity a partir de un ejemplo: un policia irá (*seek*) hacia un ladrón cuando esté lejos de él y ira "mirándolo/vigilándolo" cuando esté cerca.
 
-Utilizaremos el *Muse Behavior Agent* como componente para ejecutar los *behavior trees*:
+Utilizaremos el *Behavior Agent* como componente para ejecutar los *behavior trees*:
 
 |![](figures/copInspector3.png)|
 |:--:| 
-| Componente *Muse Behavior Agent* |
+| Componente *Behavior Agent* |
 
 Tenemos la *Blackboard* como mecanismo de compartición de variables entre los *behavior trees* y el entorno.
 
@@ -43,7 +43,7 @@ La condición añadida al nodo *Abort If* está definida por nosotros y tiene el
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Muse.Behavior;
+using Unity.Behavior;
 
 [Serializable]
 [Condition(name: "farAway", story: "d(cop, robber) > 5", category: "distances", id: "bc032ce09737b7062dca7f01eaba3690")]
@@ -65,8 +65,8 @@ Las implementaciones de *Behavior Trees* suelen tener los componentes básicos y
 ```C#
 using System;
 using UnityEngine;
-using Unity.Muse.Behavior;
-using Action = Unity.Muse.Behavior.Action;
+using Unity.Behavior;
+using Action = Unity.Behavior.Action;
 
 [Serializable]
 [NodeDescription(name: "Stop", story: "Stops the agent", category: "Action/Move", id: "37d14153df25444624d82be524a73527")]
@@ -104,11 +104,9 @@ public class Stop : Action
 
 ## Referencias
 
-- [Muse Behavior](https://docs.unity3d.com/Packages/com.unity.muse.behavior@0.10/manual/index.html)
+- [Unity Behavior](https://docs.unity3d.com/Packages/com.unity.behavior@1.0/manual/index.html)
 
 - Chris Simpson. [Behavior trees for AI: How they work](https://www.gamedeveloper.com/programming/behavior-trees-for-ai-how-they-work). Game Developer, 2014.
-
-- [Muse AI](https://unity.com/products/muse)
 
 - Asset [Easy Primitive People](https://assetstore.unity.com/packages/3d/characters/easy-primitive-people-161846)
 
