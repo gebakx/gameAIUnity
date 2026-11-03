@@ -34,69 +34,12 @@ L'*Acció* `Self moves to robber` té les propietats (al *Node Inspector*):
 |:--|:--| 
 | Agent | Self |
 | Target | robber |
-| Speed | 2 |
-| Distance Threshold | 3 |
-
-La condició afegida al node *Abort If* està definida per nosaltres i té el codi:
-
-```C#
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-using Unity.Behavior;
-
-[Serializable]
-[Condition(name: "farAway", story: "d(cop, robber) > 5", category: "distances", id: "bc032ce09737b7062dca7f01eaba3690")]
-public class farAway : Condition
-{
-    public BlackboardVariable<GameObject> Agent;
-    public BlackboardVariable<GameObject> Target;
-    public override bool IsTrue()
-    {
-        return Vector3.Distance(
-            Agent.Value.transform.position,
-            Target.Value.transform.position) > 5f;
-    }
-}
-```
-
-Les implementacions de *Behavior Trees* solen tenir els components bàsics i facilitat per implementar accions i condicions. El codi anterior us serveix com a exemple de condició. A continuació teniu un exemple d'acció (que no s'utilitza en la implementació d'aquest document) que para el moviment de l'agent:
-
-```C#
-using System;
-using UnityEngine;
-using Unity.Behavior;
-using Action = Unity.Behavior.Action;
-
-[Serializable]
-[NodeDescription(name: "Stop", story: "Stops the agent", category: "Action/Move", id: "37d14153df25444624d82be524a73527")]
-public class Stop : Action
-{
-    public BlackboardVariable<GameObject> Agent;
-    private UnityEngine.AI.NavMeshAgent m_NavMeshAgent;
-
-    protected override Status OnStart()
-    {
-        return Status.Running;
-    }
-
-    protected override Status OnUpdate()
-    {
-        m_NavMeshAgent = Agent.Value.GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
-        if (m_NavMeshAgent != null)
-        {
-            m_NavMeshAgent.isStopped = true;
-        }
-        return Status.Success;
-    }
-
-    protected override void OnEnd()
-    {
-    }
-}
+| Speed | 1 |
+| Distance Threshold | 5 |
 
 
-```
+Les implementacions de *Behavior Trees* solen tenir els components bàsics i facilitat per implementar accions i condicions. Si feu un "Inspect Script" d'una condició o acció podeu veure com estan implementades. 
+
 
 ## Implementació
 
